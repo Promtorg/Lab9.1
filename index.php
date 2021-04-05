@@ -1,21 +1,21 @@
-<?php
+﻿<?php
 
 use Suslov\MyLog;
-use Suslov\SuslovException;
 use Suslov\QuEquation;
 
-include "core/EquationInterface.php";
-include "core/LogAbstract.php";
-include "core/LogInterface.php";
+include "core/core/EquationInterface.php";
+include "core/core/LogAbstract.php";
+include "core/core/LogInterface.php";
 include "Suslov/MyLog.php";
 include "Suslov/Equation.php";
 include "Suslov/QuEquation.php";
-include "Suslov/SuslovException.php";
+include "Suslov/Exception.php";
 
 ini_set("display_errors", 1);
 error_reporting(-1);
 
 try {
+    MyLog::log("Версия программы: " . trim(file_get_contents('version')) );
     $b = new QuEquation();
     $values = array();
 
@@ -32,7 +32,7 @@ try {
 
     $str = implode(", ", $x);
     MyLog::log("Корни уравнения: " . $str);
-} catch (SuslovException $e) {
+} catch (Exception $e) {
     MyLog::log($e->getMessage());
 }
 

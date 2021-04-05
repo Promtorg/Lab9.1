@@ -2,7 +2,7 @@
 
 use RuntimeException;
 
-Class SuslovException extends RuntimeException
+Class Exception extends RuntimeException
 {
 }
 

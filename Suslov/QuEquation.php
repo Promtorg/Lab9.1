@@ -12,7 +12,7 @@ Class QuEquation extends Equation implements EquationInterface
         return ($b ** 2) - 4 * $a * $c;
     }
 
-    public function solve($a, $b, $c)
+    public function solve($a, $b, $c): array
     {
 
         $x = $this->dis($a, $b, $c);
@@ -32,7 +32,7 @@ Class QuEquation extends Equation implements EquationInterface
             return $this->X = array(-($b / (2 * $a)));
         }
 
-        throw new SuslovException("Ошибка: уравнение не имеет корней.");
+        throw new Exception("Ошибка: уравнение не имеет корней.");
 
     }
 

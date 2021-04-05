@@ -1,2 +1,4 @@
-core/
-.idea/
+.idea
+start.bat
+log
+version
