@@ -7,7 +7,7 @@
     "content-hash": "2655a4e6b160ed27f8ae5a3d70489e98",
     "packages": [
         {
-            "name": "promtorg/lab10",
+            "name": "promtorg/lab11",
             "version": "1.0",
             "source": {
                 "type": "git",
