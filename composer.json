@@ -1,0 +1,33 @@
+{
+  "name": "promtorg/lab9.1",
+  "description": "lab10",
+  "type": "project",
+  "license": "-",
+  "authors": [
+    {
+      "name": "Promtorg",
+      "email": "Promtorg@gmail.com"
+    }
+  ],
+
+  "minimum-stability": "dev",
+    "scripts": {
+    "post-install-cmd": [
+        "git symbolic-ref --short -q HEAD>version"
+    ]
+	},
+
+  "require": {
+    "promtorg/lab10": "^1.0"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/rok9ru/trpo-core"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/Promtorg/Lab10.git"
+    }
+  ]
+}

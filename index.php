@@ -3,19 +3,23 @@
 use Suslov\MyLog;
 use Suslov\QuEquation;
 
-include "core/core/EquationInterface.php";
+/*include "core/core/EquationInterface.php";
 include "core/core/LogAbstract.php";
 include "core/core/LogInterface.php";
 include "Suslov/MyLog.php";
 include "Suslov/Equation.php";
 include "Suslov/QuEquation.php";
-include "Suslov/Exception.php";
+include "Suslov/Exception.php";*/
+require_once __DIR__ . './vendor/autoload.php';
 
 ini_set("display_errors", 1);
 error_reporting(-1);
 
 try {
-    MyLog::log("Версия программы: " . trim(file_get_contents('version')) );
+	if(!is_dir("log")){
+		mkdir("log", 0700);
+	}
+    //MyLog::log("Версия программы: " . trim(file_get_contents('version')) );
     $b = new QuEquation();
     $values = array();
 
